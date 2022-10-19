@@ -16,13 +16,13 @@ public class Greedy {
 
         num = scanner.nextInt();
         memo = new Long[num][2]; // 0 = banyak coin; 1 = coin pertama
-        System.out.println("Coins needed = " + g(num));
+        System.out.println("Coins needed : " + g(num));
 
         // cetak coin apa aja
-        System.out.print("What are those = ");
+        System.out.println("What are those :");
         int temp = num;
         while (temp != 0) {
-            System.out.print(memo[temp-1][1] + " ");
+            System.out.println(memo[temp-1][1]);
             temp -= memo[temp-1][1];
         }
     }
