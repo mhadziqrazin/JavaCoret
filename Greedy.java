@@ -46,7 +46,7 @@ public class Greedy {
         }
 
         long minCoin = 0;
-        long minNeeds = Long.MAX_VALUE;
+        long minNeeds = ret;
         long temp;
 
         // iterasi tiap opsi coin
