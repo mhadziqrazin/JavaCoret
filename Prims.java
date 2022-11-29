@@ -42,7 +42,10 @@ public class Prims {
         int E = in.nextInt();
         for (int i = 0; i < E; i++) {
             int A = in.nextInt(), B = in.nextInt(), W = in.nextInt();
+
+            // undirected graph
             graph.get(A).neigh.add(new AdjVertex(B, W));
+            graph.get(B).neigh.add(new AdjVertex(A, W));
         }
 
         prims(N, 1);
@@ -74,6 +77,7 @@ public class Prims {
 
                 if (minWeight[n.vertex][0] == null &&
                         (minWeight[n.vertex][1] == null || n.weight < minWeight[n.vertex][1])) {
+
                     minWeight[n.vertex][1] = n.weight;
                     minWeight[n.vertex][2] = (long) cur.vertex;
 
@@ -84,6 +88,7 @@ public class Prims {
         }
 
         for (int i = 1; i <= N; i++) {
+            // vertex | known | edge's weight | pair
             out.println(i + " " + minWeight[i][0] + " " + minWeight[i][1] + " " + minWeight[i][2]);
         }
     }
