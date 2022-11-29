@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+class Apa {
+    Apa a;
+}
 
 public class JavaCoret {
     private static InputReader in;
@@ -10,12 +13,8 @@ public class JavaCoret {
     private static int num;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        num = scanner.nextInt();
-        memo = new Integer[num];
-        System.out.println(g(num));
-        System.out.println(Arrays.toString(memo));
-
+        int[] p = new int[800_000];
+        p[0] = 100;
     }
 
     static int g(int ret) {
